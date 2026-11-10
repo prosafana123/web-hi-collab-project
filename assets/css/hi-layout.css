@@ -1,0 +1,218 @@
+
+/* =========================================
+   HOUSE ILMU INDONESIA
+   NAVBAR & FOOTER
+========================================= */
+
+.hi-nav,
+.hi-nav *,
+.hi-footer,
+.hi-footer * {
+    font-family: "Nunito", system-ui, sans-serif;
+}
+
+/* NAVBAR */
+.hi-nav {
+    background: #fff9f0;
+    border-bottom: 1px solid #ecdfcf;
+}
+
+.hi-nav-inner {
+    width: min(1424px, 100% - 2.5rem);
+    margin-inline: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 0;
+}
+
+.hi-brand {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    text-decoration: none;
+    margin-right: 2rem;
+}
+
+.hi-brand img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+}
+
+.hi-brand span {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: #0b2a5b;
+}
+
+.hi-brand b {
+    color: #f57c00;
+}
+
+.hi-nav-toggle {
+    border: 0;
+    font-size: 1.6rem;
+    color: #f57c00;
+}
+
+.hi-nav-list {
+    list-style: none;
+    margin: 0 0 0 auto;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.5rem;
+}
+
+.hi-nav-link {
+    display: block;
+    padding: 1.5rem 0;
+    font-size: .9rem;
+    font-weight: 700;
+    color: #0b2a5b;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+}
+
+.hi-nav-link:hover,
+.hi-nav-link.active {
+    color: #f57c00;
+}
+
+.hi-nav-link.active {
+    border-bottom-color: #f57c00;
+}
+
+.hi-nav .dropdown-item.active,
+.hi-nav .dropdown-item:active {
+    background: #f57c00;
+}
+
+/* NAVBAR RESPONSIVE */
+@media (max-width: 1399.98px) {
+    .hi-nav-list {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        margin-left: 0;
+        gap: 0;
+        padding: .5rem 0 1rem;
+    }
+
+    .hi-nav-link {
+        padding: .6rem 0;
+        font-size: 1rem;
+    }
+}
+
+/* FOOTER */
+.hi-footer {
+    background: #215cb5;
+    color: #fff;
+    padding: 4rem 0 1.5rem;
+}
+
+.hi-footer-inner {
+    width: min(1424px, 100% - 2.5rem);
+    margin-inline: auto;
+}
+
+.hi-footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+}
+
+.hi-footer-logo {
+    width: 115px;
+    height: 115px;
+    object-fit: contain;
+}
+
+.hi-footer-tag {
+    font-family: "Nunito", system-ui, sans-serif;
+    font-size: clamp(1.6rem, 3vw, 2rem);
+    font-weight: 900;
+    line-height: 1.25;
+    margin: 1.25rem 0 0;
+    max-width: 12ch;
+}
+
+.hi-footer-tag em {
+    font-style: normal;
+    color: #ff9a2e;
+}
+
+.hi-footer h2 {
+    font-size: .9rem;
+    font-weight: 800;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    margin: 0 0 1.25rem;
+}
+
+.hi-footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.hi-footer li {
+    margin-bottom: .6rem;
+}
+
+.hi-footer a {
+    color: #fff;
+    text-decoration: none;
+    font-size: .9rem;
+}
+
+.hi-footer a:hover {
+    color: #ffd199;
+}
+
+.hi-footer-social a {
+    display: inline-flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.hi-footer-social i {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(255,255,255,.5);
+    border-radius: 50%;
+    font-size: .8rem;
+}
+
+.hi-footer-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: .75rem;
+    margin-top: 3rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(255,255,255,.3);
+    font-size: .85rem;
+}
+
+/* FOOTER RESPONSIVE */
+@media (max-width: 767.98px) {
+    .hi-footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .hi-footer-bar {
+        flex-direction: column;
+    }
+}

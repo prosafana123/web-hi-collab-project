@@ -1,0 +1,223 @@
+
+:root {
+    --hi-navy: #102d5c;
+    --hi-blue: #245fb5;
+    --hi-orange: #ff8517;
+    --hi-cream: #fff9f0;
+    --hi-text: #29476d;
+    --hi-white: #ffffff;
+}
+
+.detail-page {
+    background: var(--hi-cream);
+    color: var(--hi-navy);
+    font-family: 'Nunito', sans-serif;
+    min-height: 600px;
+    padding: 32px 24px 55px;
+}
+
+.detail-page * {
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+.detail-container {
+    max-width: 1020px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.detail-breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.detail-breadcrumb a {
+    color: var(--hi-navy);
+    font-size: 13px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.detail-breadcrumb a:hover {
+    color: var(--hi-orange);
+}
+
+.detail-badge {
+    background: #eaf1ff;
+    color: var(--hi-blue);
+    padding: 6px 14px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 900;
+}
+
+.detail-heading {
+    margin-bottom: 35px;
+}
+
+.detail-heading h1 {
+    font-family: 'Nunito', sans-serif;
+    color: var(--hi-navy);
+    font-size: clamp(42px, 5.5vw, 62px);
+    font-weight: 900;
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+    margin: 0 0 20px;
+}
+
+.detail-heading p {
+    max-width: 1020px;
+    color: var(--hi-text);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.9;
+    margin: 0;
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 36px;
+    max-width: 928px;
+    margin: 0 auto 36px;
+    align-items: stretch;
+}
+
+.detail-card {
+    background: var(--hi-white);
+    border: 1.5px solid var(--hi-blue);
+    border-radius: 12px;
+    padding: 27px 32px;
+    min-height: 265px;
+    box-shadow: 0 3px 9px rgba(16, 45, 92, .08);
+}
+
+.detail-card h2 {
+    font-family: 'Nunito', sans-serif;
+    color: var(--hi-orange);
+    text-align: center;
+    font-size: 22px;
+    font-weight: 900;
+    margin: 0 0 20px;
+}
+
+.detail-card ul {
+    padding-left: 19px;
+    margin: 0;
+}
+
+.detail-card li {
+    color: var(--hi-text);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.9;
+    padding-left: 3px;
+    margin-bottom: 8px;
+}
+
+.detail-card li::marker {
+    color: var(--hi-orange);
+}
+
+.detail-cta {
+    max-width: 928px;
+    margin: 0 auto;
+    padding: 30px 24px;
+    border: 1.5px solid var(--hi-blue);
+    border-radius: 12px;
+    text-align: center;
+}
+
+.detail-cta h2 {
+    font-family: 'Nunito', sans-serif;
+    color: var(--hi-orange);
+    font-size: 23px;
+    font-weight: 900;
+    margin: 0 0 12px;
+}
+
+.detail-cta p {
+    color: var(--hi-text);
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+.detail-cta a {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--hi-orange);
+    color: white;
+    border-radius: 9px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 900;
+    box-shadow: 0 3px 0 #d66a0a;
+    transition: .2s ease;
+}
+
+.detail-cta a:hover {
+    color: white;
+    background: #e8750b;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .detail-page {
+        padding: 25px 18px 40px;
+    }
+
+    .detail-breadcrumb {
+        margin-bottom: 25px;
+    }
+
+    .detail-heading h1 {
+        font-size: 40px;
+        letter-spacing: -.8px;
+    }
+
+    .detail-heading p {
+        font-size: 14px;
+    }
+
+    .detail-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .detail-card {
+        min-height: auto;
+        padding: 25px 24px;
+    }
+
+    .detail-card h2 {
+        font-size: 20px;
+    }
+
+    .detail-card li {
+        font-size: 13px;
+    }
+
+    .detail-cta {
+        padding: 22px 17px;
+    }
+
+    .detail-cta h2 {
+        font-size: 19px;
+    }
+
+    .detail-cta p {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 400px) {
+    .detail-heading h1 {
+        font-size: 34px;
+    }
+}

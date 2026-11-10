@@ -1,0 +1,239 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Alumni Stories | House Ilmu Indonesia</title>
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <!-- WEBSITE CSS -->
+    <link rel="stylesheet" href="../assets/css/hi-layout.css">
+    <link rel="stylesheet" href="../assets/css/hi-redesign.css">
+    <link rel="stylesheet" href="../assets/css/alumni-modal.css">
+
+    <style>
+        body {
+            margin: 0;
+            background: #fff9f0;
+            font-family: 'Nunito', sans-serif;
+            color: #102d5c;
+        }
+
+        .stories-page {
+            max-width: 1200px;
+            margin: auto;
+            padding: 65px 24px 80px;
+        }
+
+        .stories-header {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        .stories-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(32px, 4vw, 48px);
+            color: #ff8517;
+            margin: 0 0 14px;
+        }
+
+        .stories-header p {
+            color: #71839b;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        .stories-header::after {
+            content: "";
+            display: block;
+            width: 42px;
+            height: 3px;
+            background: #ff8517;
+            margin: 18px auto 0;
+        }
+
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 24px;
+        }
+
+        .story-card {
+            background: #fff;
+            border-radius: 14px;
+            overflow: hidden;
+            box-shadow: 0 5px 18px rgba(16,45,92,.08);
+            transition: transform .25s ease, box-shadow .25s ease;
+        }
+
+        .story-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(16,45,92,.12);
+        }
+
+        .story-image {
+            width: 100%;
+            height: 225px;
+            background: #e9edf2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            color: #77869a;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .story-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .story-content {
+            padding: 24px;
+        }
+
+        .story-content .quote-mark {
+            color: #ff8517;
+            font-size: 28px;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .story-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 23px;
+            color: #102d5c;
+            margin: 15px 0 8px;
+        }
+
+        .story-role {
+            color: #8191a8;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .story-content p {
+            color: #29476d;
+            font-size: 14px;
+            line-height: 1.8;
+            min-height: 75px;
+        }
+
+        .story-content button {
+            border: none;
+            background: transparent;
+            color: #ff8517;
+            padding: 0;
+            font-family: 'Nunito', sans-serif;
+            font-size: 14px;
+            font-weight: 900;
+            cursor: pointer;
+        }
+
+        .story-content button:hover {
+            color: #d96800;
+        }
+
+        @media (max-width: 900px) {
+            .stories-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 600px) {
+            .stories-page {
+                padding: 45px 18px 60px;
+            }
+
+            .stories-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stories-header h1 {
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div id="nav-container"></div>
+
+    <main class="stories-page">
+
+        <header class="stories-header">
+            <h1>ALUMNI STORIES</h1>
+            <p>Cerita tentang proses belajar, relasi, dan kontribusi setelah bertumbuh bersama HI.</p>
+        </header>
+
+        <section class="stories-grid">
+
+            <!-- ALUMNI 1 -->
+            <article class="story-card">
+                <div class="story-image">
+                    FOTO ALUMNI
+                </div>
+
+                <div class="story-content">
+                    <div class="quote-mark">“</div>
+                    <h2>Aiko</h2>
+                    <div class="story-role">Peserta dan Relawan HI</div>
+                    <p>House Ilmu bukan cuma tempat untuk belajar, tapi juga tempat untuk bertemu orang-orang hebat, menemukan kesempatan baru, dan terus berkembang bersama.</p>
+                    <button type="button" class="open-alumni-modal">Selengkapnya →</button>
+                </div>
+            </article>
+
+            <!-- ALUMNI 2 -->
+            <article class="story-card">
+                <div class="story-image">
+                    FOTO ALUMNI
+                </div>
+
+                <div class="story-content">
+                    <div class="quote-mark">“</div>
+                    <h2>Lina Dwi</h2>
+                    <div class="story-role">Staf House Ilmu Indonesia</div>
+                    <p>Mentoring di House Ilmu memberikan pengalaman baru, meningkatkan kepercayaan diri, dan membuka kesempatan untuk terus berkembang.</p>
+                    <button type="button" class="open-alumni-modal">Selengkapnya →</button>
+                </div>
+            </article>
+
+            <!-- ALUMNI 3 -->
+            <article class="story-card">
+                <div class="story-image">
+                    FOTO ALUMNI
+                </div>
+
+                <div class="story-content">
+                    <div class="quote-mark">“</div>
+                    <h2>Melinda</h2>
+                    <div class="story-role">Peserta Risyk</div>
+                    <p>Pengalamannya terasa berdampak karena saya belajar tentang team building, manajemen, dan pola pikir kepemimpinan.</p>
+                    <button type="button" class="open-alumni-modal">Selengkapnya →</button>
+                </div>
+            </article>
+
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <div id="footer-container"></div>
+
+    <!-- WEBSITE JAVASCRIPT -->
+    <script src="../assets/js/global/hi-layout.js"></script>
+    <script src="../assets/js/alumni-modal.js"></script>
+
+</body>
+</html>

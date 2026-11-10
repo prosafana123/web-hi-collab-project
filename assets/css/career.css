@@ -1,13 +1,16 @@
-/* start styling career section */
+/* ==========================================
+   STYLING CAREER SECTION (Original Class Structure)
+   ========================================== */
+
 .culture .culture-icons .cultures i{
-	color: #083D77;
+    color: #083D77;
 }
 
 .culture .culture-container .cultures img{
     max-width: 150px;
 }
 
-/* start styling alumni swiper career section */
+/* Start styling alumni swiper career section */
 .alumni .swiper-slide{
     background-color: #F69259;
     min-height: 200px;
@@ -15,51 +18,56 @@
 }
 
 .alumni .swiper .swiper-slide #testi-name{
-    color: #1746A2; font-weight: 700;
+    color: #1746A2;
+    font-weight: 700;
 }
 
 .alumni .swiper .swiper-slide #testi-role{
     color: #fff;
 }
-/* end styling alumni swiper career section */
+/* End styling alumni swiper career section */
 
-/* start styling available career box career section */
+/* Start styling available career box career section */
 .available .apply-info .odd{
-	background-color: #1746A2;
+    background-color: #1746A2;
 }
 
 .available .apply-info .even{
-	background-color: #D9D9D9;
+    background-color: #D9D9D9;
 }
 
-.available .apply-info .details, .available .apply-info .apply{
-	background-color: #FF9900;
+.available .apply-info .details,
+.available .apply-info .apply{
+    background-color: #FF9900;
+    color: #fff;
 }
 
-.available .apply-info .details, .available .apply-info .apply{
-	color: #fff;
+.available .apply-info .details:hover,
+.available .apply-info .apply:hover{
+    color: #1746A2;
 }
 
-.available .apply-info .details:hover, .available .apply-info .apply:hover{
-	color: #1746A2;
+/* Start styling back button career box */
+.details-career a,
+.details-career i,
+.back a{
+    color: #1746A2;
 }
-/* start styling back button career box */
-	.details-career a, .details-career i, .back a{
-		color: #1746A2;
-	}
 
-	.back:hover a, .back:hover i{
-		color: #FF9900;
-	}
+.back:hover a,
+.back:hover i{
+    color: #FF9900;
+}
 
-	.details-career h1{
-		color: #1746A2;
-		font-weight: 700;
-	}
-/* end styling back button career box */
+.details-career h1{
+    color: #1746A2;
+    font-weight: 700;
+}
+/* End styling back button career box */
 
-/* start styling career box career section */
-.career-title .career-title-container h1, .culture .culture-container h1, 
+/* Start styling career box career section */
+.career-title .career-title-container h1,
+.culture .culture-container h1,
 .career-info .career-info-container h1{
     font-weight: 900;
 }
@@ -67,56 +75,54 @@
 .career-info .career-info-container .career-box .career-link a {
     color: #fff;
 }
-    /* start styling even odd career box */
-    .career-info .career-info-container .career-box .odd {
-        background-color: #1746A2;
-        transition: .5s ease-in-out;
-    }
 
-    .career-info .career-info-container .career-box .odd a {
-        background-color: #FF9900;
-        transition: .5s ease-in-out;
-    }
+/* Start styling even odd career box */
+.career-info .career-info-container .career-box .odd {
+    background-color: #1746A2;
+    transition: .5s ease-in-out;
+}
 
-    .career-info .career-info-container .career-box .odd:hover {
-        background-color: #FF9900;
-    }
+.career-info .career-info-container .career-box .odd a {
+    background-color: #FF9900;
+    transition: .5s ease-in-out;
+}
 
-    .career-info .career-info-container .career-box .odd:hover a {
-        background-color: #1746A2;
-    }
+.career-info .career-info-container .career-box .odd:hover {
+    background-color: #FF9900;
+}
 
-    .career-info .career-info-container .career-box .odd a:hover {
-        color: #FF9900;
-    }
+.career-info .career-info-container .career-box .odd:hover a {
+    background-color: #1746A2;
+}
 
-    .career-info .career-info-container .career-box .even{
-        background-color: #FF9900;
-        transition: .5s ease-in-out;
-    }
+.career-info .career-info-container .career-box .odd a:hover {
+    color: #FF9900;
+}
 
-    .career-info .career-info-container .career-box .even a {
-        background-color: #1746A2;
-        transition: .5s ease-in-out;
-    }
+.career-info .career-info-container .career-box .even{
+    background-color: #FF9900;
+    transition: .5s ease-in-out;
+}
 
-    .career-info .career-info-container .career-box .even:hover{
-        background-color: #1746A2;
-    }
+.career-info .career-info-container .career-box .even a {
+    background-color: #1746A2;
+    transition: .5s ease-in-out;
+}
 
-    .career-info .career-info-container .career-box .even:hover a{
-        background-color: #FF9900;
-    }
+.career-info .career-info-container .career-box .even:hover{
+    background-color: #1746A2;
+}
 
-    .career-info .career-info-container .career-box .even a:hover{
-        color: #1746A2;
-    }
-    /* end styling even odd career box */    
+.career-info .career-info-container .career-box .even:hover a{
+    background-color: #FF9900;
+}
 
-/* end styling career box career section */
+.career-info .career-info-container .career-box .even a:hover{
+    color: #1746A2;
+}
+/* End styling even odd career box */
 
-/* start styling message box career section */
-
+/* Start styling message box career section */
 .message .message-container h1{
     font-weight: 900;
 }
@@ -143,7 +149,4 @@
     background-color: #FF731D;
     color: #1746A2;
 }
-
-/* end styling message box career section */
-
-/* end styling career box career section */
+/* End styling message box career section */

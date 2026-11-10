@@ -1,0 +1,826 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team | House Ilmu Indonesia</title>
+
+    <link rel="icon" href="../../assets/img/logo.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../../assets/css/hi-layout.css">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+
+    <style>
+        :root {
+            --hi-blue: #2860b5;
+            --hi-dark-blue: #092e5e;
+            --hi-orange: #ff8515;
+            --hi-cream: #fff9ef;
+            --hi-text: #142c4b;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: var(--hi-cream);
+            color: var(--hi-text);
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .team-page {
+            overflow: hidden;
+            min-height: 100vh;
+        }
+
+        /* PAGE TITLE */
+
+        .team-banner {
+            background: var(--hi-blue);
+            padding: 17px 20px;
+            text-align: center;
+        }
+
+        .team-banner h1 {
+            color: white;
+            font-family: Georgia, serif;
+            font-size: 34px;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        /* GENERAL SECTION */
+
+        .team-container {
+            width: min(1224px, 92%);
+            margin: auto;
+        }
+
+        .team-heading {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .team-heading h2 {
+            font-family: Georgia, serif;
+            color: var(--hi-dark-blue);
+            font-size: 27px;
+            font-weight: bold;
+            margin-bottom: 13px;
+        }
+
+        .team-heading span {
+            display: block;
+            width: 35px;
+            height: 3px;
+            background: var(--hi-orange);
+            margin: auto;
+        }
+
+        /* ORGANIZATION STRUCTURE */
+
+        .organization-section {
+            padding: 58px 0 25px;
+        }
+
+        .organization-box {
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 9px;
+            padding: 45px 35px;
+            overflow-x: auto;
+        }
+
+        .org-tree {
+            min-width: 850px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .org-chief {
+            background: #292929;
+            color: white;
+            border-radius: 30px;
+            padding: 7px 45px;
+            font-size: 17px;
+            font-weight: 800;
+        }
+
+        .org-line {
+            width: 1px;
+            height: 24px;
+            background: #888;
+        }
+
+        .org-vice {
+            border: 1px solid #999;
+            border-radius: 10px;
+            padding: 13px 25px;
+            background: white;
+            min-width: 210px;
+            text-align: center;
+            font-weight: 800;
+            font-size: 17px;
+        }
+
+        .org-managers {
+            border: 1px solid #999;
+            border-radius: 30px;
+            padding: 7px 35px;
+            background: white;
+            font-size: 14px;
+            font-weight: 800;
+        }
+
+        .org-branches {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            position: relative;
+            margin-top: 25px;
+        }
+
+        .org-branches::before {
+            content: "";
+            position: absolute;
+            height: 1px;
+            background: #888;
+            left: 10%;
+            right: 10%;
+            top: -1px;
+        }
+
+        .org-column {
+            position: relative;
+            padding: 20px 7px 0;
+        }
+
+        .org-column::before {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 20px;
+            background: #888;
+            top: 0;
+            left: 50%;
+        }
+
+        .org-department {
+            border: 1px solid #aaa;
+            border-radius: 10px;
+            padding: 16px 12px;
+            min-height: 280px;
+            height: 100%;
+            background: white;
+        }
+
+        .org-department h3 {
+            font-size: 15px;
+            font-weight: 900;
+            color: #20252b;
+            margin: 0 0 18px;
+            text-align: center;
+        }
+
+        .org-department h3 i {
+            font-size: 20px;
+            margin-right: 5px;
+        }
+
+        .org-position {
+            background: #f1f1f1;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 8px;
+            font-size: 12px;
+            color: #333;
+            line-height: 1.4;
+        }
+
+        /* FILTER */
+
+        .team-filter {
+            margin-top: 28px;
+            margin-bottom: 65px;
+        }
+
+        .team-filter label {
+            display: block;
+            font-size: 13px;
+            margin-bottom: 6px;
+        }
+
+        .team-filter select {
+            min-width: 190px;
+            padding: 9px 14px;
+            background: white;
+            border: 1px solid #ccc;
+            color: var(--hi-dark-blue);
+            font-size: 13px;
+            outline: none;
+        }
+
+        /* DIVISION */
+
+        .division-section {
+            padding: 10px 0 30px;
+        }
+
+        .division-title {
+            text-align: center;
+            font-family: Georgia, serif;
+            color: var(--hi-dark-blue);
+            font-size: 27px;
+            font-weight: bold;
+            margin-bottom: 38px;
+        }
+
+        /* TEAM GROUP */
+
+        .team-group {
+            width: min(1224px, 92%);
+            margin: 0 auto 19px;
+            padding: 23px 12px 24px;
+            border-radius: 5px;
+            background: var(--hi-blue);
+        }
+
+        .team-group.orange {
+            background: var(--hi-orange);
+        }
+
+        .team-group h3 {
+            color: white;
+            font-family: Georgia, serif;
+            font-size: 19px;
+            font-weight: bold;
+            margin: 0 0 18px;
+        }
+
+        .carousel-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .team-track {
+            display: flex;
+            gap: 16px;
+            flex: 1;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+            padding: 0 1px;
+        }
+
+        .team-track::-webkit-scrollbar {
+            display: none;
+        }
+
+        .team-card {
+            background: white;
+            border-radius: 7px;
+            padding: 8px;
+            flex: 0 0 calc(25% - 12px);
+            min-width: 190px;
+            text-align: center;
+            min-height: 252px;
+            transition: transform .2s ease;
+        }
+
+        .team-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .member-photo {
+            width: 100%;
+            height: 145px;
+            background: #ededed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #222;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .member-photo i {
+            font-size: 75px;
+            color: #777;
+        }
+
+        .member-photo span {
+            font-size: 12px;
+            letter-spacing: 2px;
+            font-weight: 700;
+        }
+
+        .member-name {
+            color: var(--hi-dark-blue);
+            font-weight: 900;
+            font-size: 13px;
+            margin: 8px 0 3px;
+        }
+
+        .member-role {
+            color: var(--hi-orange);
+            font-weight: 700;
+            font-size: 11px;
+            margin: 0 0 2px;
+        }
+
+        .member-subdivision {
+            color: #777;
+            font-size: 10px;
+            margin: 0;
+        }
+
+        .member-division {
+            color: #718198;
+            font-size: 9px;
+            margin-top: 3px;
+        }
+
+        .carousel-btn {
+            border: none;
+            background: white;
+            color: var(--hi-orange);
+            width: 34px;
+            height: 34px;
+            min-width: 34px;
+            border-radius: 50%;
+            font-size: 19px;
+            cursor: pointer;
+            transition: .2s;
+        }
+
+        .carousel-btn:hover {
+            background: var(--hi-dark-blue);
+            color: white;
+        }
+
+        /* JOIN SECTION */
+
+        .team-cta {
+            padding: 80px 20px 90px;
+            text-align: center;
+        }
+
+        .team-cta h2 {
+            font-family: Georgia, serif;
+            color: var(--hi-blue);
+            font-size: 29px;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .team-cta p {
+            color: #75839a;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        .team-cta a {
+            display: inline-block;
+            background: var(--hi-orange);
+            color: white;
+            padding: 12px 25px;
+            border-radius: 9px;
+            font-size: 14px;
+            font-weight: 900;
+            text-decoration: none;
+            transition: .2s;
+        }
+
+        .team-cta a:hover {
+            background: #e86e00;
+            transform: translateY(-2px);
+        }
+
+        .back-about {
+            display: block;
+            text-align: center;
+            margin: 0 auto 35px;
+            color: var(--hi-blue);
+            font-size: 13px;
+            text-decoration: none;
+        }
+
+        .back-about:hover {
+            color: var(--hi-orange);
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 900px) {
+            .team-card {
+                flex-basis: calc(33.333% - 12px);
+            }
+
+            .organization-box {
+                padding: 30px 15px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .team-banner h1 {
+                font-size: 26px;
+            }
+
+            .team-heading h2,
+            .division-title {
+                font-size: 23px;
+            }
+
+            .organization-section {
+                padding-top: 40px;
+            }
+
+            .team-filter {
+                margin-bottom: 45px;
+            }
+
+            .team-card {
+                flex-basis: 75%;
+                min-width: 210px;
+            }
+
+            .team-group {
+                width: 94%;
+                padding: 18px 9px;
+            }
+
+            .team-group h3 {
+                font-size: 17px;
+            }
+
+            .carousel-wrapper {
+                gap: 6px;
+            }
+
+            .carousel-btn {
+                width: 29px;
+                min-width: 29px;
+                height: 29px;
+            }
+
+            .team-cta h2 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <div id="nav-container"></div>
+
+    <main class="team-page">
+
+        <!-- PAGE TITLE -->
+        <section class="team-banner">
+            <h1>OUR TEAM</h1>
+        </section>
+
+        <!-- ORGANIZATION STRUCTURE -->
+        <section class="organization-section">
+            <div class="team-container">
+
+                <div class="team-heading">
+                    <h2>ORGANIZATION STRUCTURE</h2>
+                    <span></span>
+                </div>
+
+                <div class="organization-box">
+                    <div class="org-tree">
+
+                        <div class="org-chief">Chief</div>
+                        <div class="org-line"></div>
+
+                        <div class="org-vice">
+                            <i class="fa-solid fa-users me-2"></i>
+                            Vice President
+                        </div>
+
+                        <div class="org-line"></div>
+                        <div class="org-managers">Managers</div>
+
+                        <div class="org-branches">
+
+                            <div class="org-column">
+                                <div class="org-department">
+                                    <h3><i class="fa-regular fa-user"></i> Human Capital</h3>
+                                    <div class="org-position">Human Capital Organization</div>
+                                    <div class="org-position">Human Capital System</div>
+                                    <div class="org-position">Human Capital Talent Acquisition</div>
+                                </div>
+                            </div>
+
+                            <div class="org-column">
+                                <div class="org-department">
+                                    <h3><i class="fa-solid fa-laptop"></i> Technology</h3>
+                                    <div class="org-position">Web Development</div>
+                                </div>
+                            </div>
+
+                            <div class="org-column">
+                                <div class="org-department">
+                                    <h3><i class="fa-solid fa-bullhorn"></i> Marketing</h3>
+                                    <div class="org-position">Digital Marketing</div>
+                                    <div class="org-position">Event Marketing</div>
+                                    <div class="org-position">Copywriting</div>
+                                    <div class="org-position">Social Media</div>
+                                    <div class="org-position">Graphic Design</div>
+                                    <div class="org-position">Talent Management</div>
+                                    <div class="org-position">Talent</div>
+                                </div>
+                            </div>
+
+                            <div class="org-column">
+                                <div class="org-department">
+                                    <h3><i class="fa-solid fa-cube"></i> Product Development</h3>
+                                    <div class="org-position">Product Development</div>
+                                    <div class="org-position">Education Counselor</div>
+                                </div>
+                            </div>
+
+                            <div class="org-column">
+                                <div class="org-department">
+                                    <h3><i class="fa-regular fa-building"></i> CEO Office</h3>
+                                    <div class="org-position">Finance</div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FILTER DIVISION -->
+                <div class="team-filter">
+                    <label for="divisionFilter">Divisi</label>
+                    <select id="divisionFilter">
+                        <option value="all">ALL DIVISIONS</option>
+                        <option value="human-capital">HUMAN CAPITAL</option>
+                        <option value="technology">TECHNOLOGY</option>
+                        <option value="marketing">MARKETING</option>
+                        <option value="product-development">PRODUCT DEVELOPMENT</option>
+                        <option value="ceo-office">CEO OFFICE</option>
+                    </select>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- HUMAN CAPITAL -->
+        <section class="division-section" data-division="human-capital">
+            <h2 class="division-title">HUMAN CAPITAL</h2>
+
+            <div id="human-capital-groups"></div>
+        </section>
+
+        <!-- TECHNOLOGY -->
+        <section class="division-section" data-division="technology">
+            <h2 class="division-title">TECHNOLOGY</h2>
+
+            <div id="technology-groups"></div>
+        </section>
+
+        <!-- MARKETING -->
+        <section class="division-section" data-division="marketing">
+            <h2 class="division-title">MARKETING</h2>
+
+            <div id="marketing-groups"></div>
+        </section>
+
+        <!-- PRODUCT DEVELOPMENT -->
+        <section class="division-section" data-division="product-development">
+            <h2 class="division-title">PRODUCT DEVELOPMENT</h2>
+
+            <div id="product-groups"></div>
+        </section>
+
+        <!-- CEO OFFICE -->
+        <section class="division-section" data-division="ceo-office">
+            <h2 class="division-title">CEO OFFICE</h2>
+
+            <div id="ceo-groups"></div>
+        </section>
+
+        <!-- JOIN CTA -->
+        <section class="team-cta">
+            <h2>BE PART OF HOUSE ILMU</h2>
+            <p>Mari belajar, terhubung, dan tumbuh bersama House Ilmu Indonesia.</p>
+            <a href="../../career/">Gabung Sekarang ↗</a>
+        </section>
+
+        <a href="../" class="back-about">
+            <i class="fa-solid fa-arrow-left me-2"></i>
+            Kembali ke About Us
+        </a>
+
+    </main>
+
+    <!-- FOOTER -->
+    <div id="footer-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/global/hi-layout.js"></script>
+
+    <script>
+        // DATA ANGGOTA TIM
+        // Nama dan foto bisa diganti dengan data anggota sebenarnya.
+
+        const divisions = [
+            {
+                id: "human-capital",
+                target: "human-capital-groups",
+                color: "blue",
+                department: "HUMAN CAPITAL",
+                groups: [
+                    "Human Capital Organization",
+                    "Human Capital System",
+                    "Human Capital Talent Acquisition"
+                ]
+            },
+            {
+                id: "technology",
+                target: "technology-groups",
+                color: "blue",
+                department: "TECHNOLOGY",
+                groups: [
+                    "Web Development"
+                ]
+            },
+            {
+                id: "marketing",
+                target: "marketing-groups",
+                color: "blue",
+                department: "MARKETING",
+                groups: [
+                    "Digital Marketing",
+                    "Event Marketing",
+                    "Creative & Social Media",
+                    "Talent Management"
+                ]
+            },
+            {
+                id: "product-development",
+                target: "product-groups",
+                color: "blue",
+                department: "PRODUCT DEVELOPMENT",
+                groups: [
+                    "Product Development",
+                    "Education Counselor"
+                ]
+            },
+            {
+                id: "ceo-office",
+                target: "ceo-groups",
+                color: "blue",
+                department: "CEO OFFICE",
+                groups: [
+                    "Finance"
+                ]
+            }
+        ];
+
+        // MEMBUAT KARTU ANGGOTA
+
+        function createMemberCard(number, group, department) {
+            const formattedNumber = String(number).padStart(2, "0");
+
+            return `
+                <article class="team-card">
+                    <div class="member-photo">
+                        <i class="fa-regular fa-image"></i>
+                        <span>PLACEHOLDER</span>
+                    </div>
+
+                    <p class="member-name">Dummy Member ${formattedNumber}</p>
+                    <p class="member-role">${group}</p>
+                    <p class="member-subdivision">${group}</p>
+                    <p class="member-division">${department}</p>
+                </article>
+            `;
+        }
+
+        // MEMBUAT DIVISI DAN CAROUSEL
+
+        function createTeamGroups() {
+            divisions.forEach((division) => {
+                const container = document.getElementById(division.target);
+
+                if (!container) return;
+
+                division.groups.forEach((group, index) => {
+
+                    const groupElement = document.createElement("div");
+
+                    groupElement.className =
+                        "team-group" + (index % 2 === 1 ? " orange" : "");
+
+                    groupElement.innerHTML = `
+                        <h3>${group}</h3>
+
+                        <div class="carousel-wrapper">
+
+                            <button
+                                class="carousel-btn prev-btn"
+                                aria-label="Anggota sebelumnya"
+                                type="button">
+                                <i class="fa-solid fa-chevron-left"></i>
+                            </button>
+
+                            <div class="team-track">
+
+                                ${Array.from(
+                                    { length: 4 },
+                                    (_, i) => createMemberCard(
+                                        i + 1,
+                                        group,
+                                        division.department
+                                    )
+                                ).join("")}
+
+                            </div>
+
+                            <button
+                                class="carousel-btn next-btn"
+                                aria-label="Anggota berikutnya"
+                                type="button">
+                                <i class="fa-solid fa-chevron-right"></i>
+                            </button>
+
+                        </div>
+                    `;
+
+                    container.appendChild(groupElement);
+
+                    const track = groupElement.querySelector(".team-track");
+                    const prev = groupElement.querySelector(".prev-btn");
+                    const next = groupElement.querySelector(".next-btn");
+
+                    prev.addEventListener("click", () => {
+                        track.scrollBy({
+                            left: -250,
+                            behavior: "smooth"
+                        });
+                    });
+
+                    next.addEventListener("click", () => {
+                        track.scrollBy({
+                            left: 250,
+                            behavior: "smooth"
+                        });
+                    });
+
+                });
+            });
+        }
+
+        // FILTER DIVISI
+
+        function setupDivisionFilter() {
+            const filter = document.getElementById("divisionFilter");
+
+            filter.addEventListener("change", function () {
+
+                const selectedDivision = this.value;
+
+                document.querySelectorAll(".division-section").forEach(section => {
+
+                    if (
+                        selectedDivision === "all" ||
+                        section.dataset.division === selectedDivision
+                    ) {
+                        section.style.display = "block";
+                    } else {
+                        section.style.display = "none";
+                    }
+
+                });
+
+            });
+        }
+
+        // JALANKAN SEMUA FUNGSI
+
+        document.addEventListener("DOMContentLoaded", () => {
+            createTeamGroups();
+            setupDivisionFilter();
+        });
+
+    </script>
+
+</body>
+</html>

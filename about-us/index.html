@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
@@ -11,226 +11,226 @@
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <!-- Link CDN Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <!-- Link CDN Animation on Scroll -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <!-- Link CSS Navbar -->
-    <link rel="stylesheet" href="../assets/css/navbar-footer.css">
-    <!-- Link CSS About Page -->
-    <link rel="stylesheet" href="../assets/css/about-us.css">
+    <!-- Font redesign -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Link CSS Navbar & Footer redesign -->
+    <link rel="stylesheet" href="../assets/css/hi-layout.css">
     <!-- Link CSS Global Reset -->
     <link rel="stylesheet" href="../assets/css/global.css">
+    <!-- Link CSS Redesign (dimuat terakhir, semua class berawalan hi-) -->
+    <link rel="stylesheet" href="../assets/css/hi-redesign.css">
 </head>
 
 <body>
     <!-- Navigation content -->
     <div id="nav-container"></div>
 
-    <!-- Start about title section -->
-    <section class="about-title container-xl mt-5">
-        <div class="about-title-container container-sm d-flex flex-column justify-content-center align-items-center text-center"
-            data-aos="fade">
-            <h1 class="py-4"><span style="color: #1746A2;">Better</span> <span style="color: #FF731D;">Career</span>
-                <span style="color: #1746A2;">for Better</span> <span style="color: #FF731D;">Future</span></h1>
-            <p>House Ilmu adalah sebuah platform yang bergerak di bidang career development dengan mengedepankan unsur
-                sosial untuk memberikan impact bagi generasi muda.</p>
-        </div>
-    </section>
-    <!-- End about title section -->
-
-    <!-- Start about mission section -->
-    <section class="mission container-xl mt-5">
-        <div
-            class="mission-container container-xl d-flex flex-column flex-md-row justify-content-around align-items-center text-light">
-            <!-- Start mission box -->
-            <div class="col-12 col-md-5 col-lg-4 d-flex flex-column justify-content-center align-items-center text-center p-4 my-2 my-md-0 rounded-4"
-                style="background-color: #1746A2;" data-aos="fade-right">
-                <h1 class="fw-bold py-3">Our Mission</h1>
-                <ol class="text-light text-start">
-                    <li>Memfasilitasi generasi muda untuk mengenali passion diri guna menentukan karir masa depan</li>
-                    <li>Meningkatkan soft skill dan life skill generasi muda.</li>
-                </ol>
+    <main class="hi-page">
+        <!-- Hero (mengikuti desain Figma) -->
+        <section class="hi-hero">
+            <div class="hi-wrap">
+                <h1>Better Career for Better Future</h1>
+                <p class="hi-hero-sub">House Ilmu adalah sebuah platform yang bergerak di bidang career development dengan mengedepankan unsur sosial untuk memberikan impact bagi generasi muda.</p>
             </div>
-            <!-- End mission box -->
-            <!-- Start vision box -->
-            <div class="col-12 col-md-5 col-lg-4 d-flex flex-column justify-content-center align-items-center text-center p-4 my-2 my-md-0 rounded-4"
-                style="background-color: #FF731D;" data-aos="fade-left">
-                <h1 class="fw-bold py-3">Our Vision</h1>
-                <p class="fw-light">Menjadi kawan bagi generasi muda untuk dalam pengembangan karir yang berfokus pada
-                    soft skill dan life skill</p>
-            </div>
-            <!-- End vision box -->
-        </div>
-    </section>
-    <!-- End about mission section -->
+        </section>
 
-    <!-- Start about timeline section -->
-    <section class="timeline container-xl mt-5">
-        <div class="timeline-container container-xl d-flex flex-column justify-content-center align-items-center">
-            <h1 class="py-4" style="color: #1746A2;">Timeline</h1>
-            <div class="timeline-desc-container container-xl d-flex flex-row flex-md-column justify-content-start">
-                <!-- Start timeline bullet image -->
-                <div class="timeline-img d-flex justify-content-center my-0 my-md-2 mx-3 mx-md-0">
-                    <img class="horizontal-img d-none d-md-block" src="../assets/img/timeline.png" alt="timeline image">
-                    <img class="vertical-img d-block d-md-none" src="../assets/img/timeline-vertical.png"
-                        alt="timeline image">
+        <!-- Vision & mission -->
+        <section class="hi-block">
+            <div class="hi-wrap" style="max-width:1125px">
+                <h2 class="hi-title">Our Vision &amp; Mission</h2>
+                <div class="hi-vision">
+                    <p class="hi-eyebrow">Visi Kami</p>
+                    <h3>Menjadi kawan bagi generasi muda dalam pengembangan karir yang berfokus pada soft skill dan life skill.</h3>
                 </div>
-                <!-- End timeline bullet image -->
-                <!-- Start timeline desc -->
-                <div class="timeline-desc-box d-flex flex-column flex-md-row justify-content-around">
-                    <div
-                        class="timeline-desc col-12 col-md-3 col-lg-3 d-flex flex-column justify-content-start align-items-md-start mx-md-2">
-                        <h2 class="my-0" style="color: #1746A2;">2021</h2>
-                        <p>Educatian, <br> Environment dan Life <br> Style</p>
-                    </div>
-                    <div
-                        class="timeline-desc col-12 col-md-3 col-lg-3 d-flex flex-column justify-content-start align-items-md-center mx-md-2">
-                        <h2 class="mt-4 mt-md-0" style="color: #1746A2;">2023</h2>
-                        <p class="mb-5 mb-md-0">Education dan Skill</p>
-                    </div>
-                    <div
-                        class="timeline-desc col-12 col-md-3 col-lg-3 d-flex flex-column justify-content-start align-items-md-end mx-md-2">
-                        <h2 class="mt-5 mt-md-0" style="color: #1746A2;">2024</h2>
-                        <p>Career</p>
-                    </div>
-                </div>
-                <!-- End timeline desc -->
-            </div>
-        </div>
-    </section>
-    <!-- End about timeline section -->
-
-    <!-- Start about profile images section -->
-    <section class="profiles container-xl my-5">
-        <div class="profiles-container container-xl d-flex flex-column justify-content-center align-items-center">
-            <h1 class="py-4" style="color: #1746A2;">Board of Director</h1>
-
-            <div class="chief d-flex flex-column justify-content-center align-items-center">
-                <h1 class="py-3" style="color: #FF731D;">Chief Officer</h1>
-                <div class="chief-member d-flex flex-column flex-md-row justify-content-around align-items-start">
-                    <div class="chief-desc col-12 col-md-4 d-flex flex-column justify-content-center align-items-center"
-                        data-aos="fade-up">
-                        <div class="member-sosmed d-flex flex-column align-items-center position-relative">
-                            <img class="rounded-3 img-fluid" src="../assets/img/Lutfia Rahmannisa_CEO.png"
-                                style="width: 70vw;" alt="foto ceo lutfia">
-                            <div
-                                class="member-sosmed-links d-flex justify-content-evenly align-items-center gap-2 rounded-3">
-                                <a href="https://www.linkedin.com/in/lutfia-rahmannisa-3b2679192/" target="_blank"><i
-                                        class="fa-brands fa-linkedin"></i></a>
-                                <a href="mailto:nisalutfia28@gmail.com" target="_blank"><i
-                                        class="fa-solid fa-envelope"></i></a>
-                            </div>
-                        </div>
-                        <h3 class="fw-bold py-3">CEO</h3>
-                        <h5>Lutfia Rahmannisa</h5>
-                    </div>
-                    <!-- <div class="chief-desc col-12 col-md-4 d-flex flex-column justify-content-center align-items-center" data-aos="fade-up">
-                        <img class="rounded-3 img-fluid" src="../assets/img/Cindy Ayustin Afina_COO.jpg" alt="foto coo cindy">
-                        <h3 class="fw-bold py-3">COO</h3>
-                        <h5>Cindy Ayustin Afina</h5>
-                    </div> -->
+                <div class="hi-mission-grid">
+                    <div class="hi-mission"><span>01</span><p>Memfasilitasi generasi muda untuk mengenali passion diri guna menentukan karir masa depan.</p></div>
+                    <div class="hi-mission"><span>02</span><p>Meningkatkan soft skill dan life skill generasi muda.</p></div>
                 </div>
             </div>
+        </section>
 
-            <div class="vice d-flex flex-column justify-content-center align-items-center my-5">
-                <h1 class="py-3" style="color: #FF731D;">Vice President</h1>
-                <div class="vice-member d-flex flex-wrap justify-content-around align-items-start">
-                    <div class="vice-desc col-12 col-md-4 d-flex flex-column justify-content-center align-items-center my-2 text-center"
-                        data-aos="fade-up">
-                        <div class="member-sosmed d-flex flex-column align-items-center position-relative">
-                            <img class="rounded-3" src="../assets/img/Alfianti Yanuar Mega_VP Prodev.png"
-                                alt="foto vp prodev alfianti">
-                            <div
-                                class="member-sosmed-links d-flex justify-content-evenly align-items-center gap-2 rounded-3">
-                                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                                <a href="#"><i class="fa-solid fa-envelope"></i></a>
-                            </div>
-                        </div>
-                        <h3 class="fw-bold py-3">Product Development</h3>
-                        <h5>Alfianti Yanuar Mega</h5>
-                    </div>
-                    <div class="vice-desc col-12 col-md-4 d-flex flex-column justify-content-center align-items-center my-2 text-center"
-                        data-aos="fade-up">
-                        <div class="member-sosmed d-flex flex-column align-items-center position-relative">
-                            <img class="rounded-3" src="../assets/img/Dhini.png" alt="foto vp finance dhini">
-                            <div
-                                class="member-sosmed-links d-flex justify-content-evenly align-items-center gap-2 rounded-3">
-                                <a href="https://www.linkedin.com/in/dhinipermatasari" target="_blank"><i
-                                        class="fa-brands fa-linkedin"></i></a>
-                                <a href="mailto:dhinipermatasari84@gmail.com" target="_blank"><i
-                                        class="fa-solid fa-envelope"></i></a>
-                            </div>
-                        </div>
-                        <h3 class="fw-bold py-3">Finance</h3>
-                        <h5>Dhini Permatasari</h5>
-                    </div>
-                    <div class="vice-desc col-12 col-md-4 d-flex flex-column justify-content-center align-items-center my-2 text-center"
-                        data-aos="fade-up">
-                        <div class="member-sosmed d-flex flex-column align-items-center position-relative">
-                            <img class="rounded-3" src="../assets/img/DWI_PUJI_LESTARI- VP Marketing.png"
-                                alt="foto vp marketing dwi">
-                            <div
-                                class="member-sosmed-links d-flex justify-content-evenly align-items-center gap-2 rounded-3">
-                                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
-                                <a href="#"><i class="fa-solid fa-envelope"></i></a>
-                            </div>
-                        </div>
-                        <h3 class="fw-bold py-3">Marketing</h3>
-                        <h5>Dwi Puji Lestari</h5>
-                    </div>
-                    <div class="vice-desc col-12 col-md-4 d-flex flex-column justify-content-center align-items-center my-2 text-center"
-                        data-aos="fade-up">
-                        <div class="member-sosmed d-flex flex-column align-items-center position-relative">
-                            <img class="rounded-3" src="../assets/img/Faiza Kurniawati_VP Technology.png"
-                                alt="foto vp technology faiza">
-                            <div
-                                class="member-sosmed-links d-flex justify-content-evenly align-items-center gap-2 rounded-3">
-                                <a href="https://www.linkedin.com/in/faizakurniawati" target="_blank"><i
-                                        class="fa-brands fa-linkedin"></i></a>
-                                <a href="mailto:faizaaa.kurniawati@gmail.com" target="_blank"><i
-                                        class="fa-solid fa-envelope"></i></a>
-                            </div>
-                        </div>
-                        <h3 class="fw-bold py-3">Technology</h3>
-                        <h5>Faiza Kurniawati</h5>
-                    </div>
-                    <div class="vice-desc col-12 col-md-4 d-flex flex-column justify-content-center align-items-center my-2 text-center"
-                        data-aos="fade-up">
-                        <div class="member-sosmed d-flex flex-column align-items-center position-relative">
-                            <img class="rounded-3"
-                                src="../assets/img/Jesline_Tania_Indah_Pardosi_VP_Bussiness Development.png"
-                                alt="foto vp bisdev jesline">
-                            <div
-                                class="member-sosmed-links d-flex justify-content-evenly align-items-center gap-2 rounded-3">
-                                <a href="https://www.linkedin.com/in/jesline-tania-indah-pardosi-5257a6279"
-                                    target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                                <a href="mailto:jeslinepardosi1@gmail.com" target="_blank"><i
-                                        class="fa-solid fa-envelope"></i></a>
-                            </div>
-                        </div>
-                        <h3 class="fw-bold py-3">Business Development</h3>
-                        <h5>Jesline Tania Indah Pardosi</h5>
-                    </div>
-                    <div class="vice-desc col-12 col-md-4 d-flex flex-column justify-content-center align-items-center my-2 text-center"
-                        data-aos="fade-up">
-                        <div class="member-sosmed d-flex flex-column align-items-center position-relative">
-                            <img class="rounded-3" src="../assets/img/Naila_Nariswari_HP_VP Human Capital.png"
-                                alt="foto vp hc naila">
-                            <div
-                                class="member-sosmed-links d-flex justify-content-evenly align-items-center gap-2 rounded-3">
-                                <a href="https://www.linkedin.com/in/naila-nariswari-hp-19a25422b" target="_blank"><i
-                                        class="fa-brands fa-linkedin"></i></a>
-                                <a href="mailto:nailahalisya87@gmail.com" target="_blank"><i
-                                        class="fa-solid fa-envelope"></i></a>
-                            </div>
-                        </div>
-                        <h3 class="fw-bold py-3">Human Capital</h3>
-                        <h5>Naila Nariswari</h5>
+        <!-- Culture & values -->
+        <section class="hi-block hi-culture">
+            <div class="hi-wrap-wide" style="max-width:1424px">
+                <h2 class="hi-title hi-title-light">Our Culture &amp; Values</h2>
+                <div class="hi-culture-top">
+                    <div class="hi-culture-card"><p class="hi-eyebrow">Core Value</p><h3>Edusociopreneur</h3></div>
+                    <div class="hi-culture-card"><p class="hi-eyebrow">Our Value</p><h3>Learn, Grow, and Get Achievement Together</h3></div>
+                    <div class="hi-culture-card"><p class="hi-eyebrow">Culture</p><h3>DEALS</h3></div>
+                </div>
+                <div class="hi-deals">
+                    <div class="hi-deal"><b>D</b><h3>Discipline</h3></div>
+                    <div class="hi-deal"><b>E</b><h3>Entrepreneur</h3></div>
+                    <div class="hi-deal"><b>A</b><h3>Agile</h3></div>
+                    <div class="hi-deal"><b>L</b><h3>Learning</h3></div>
+                    <div class="hi-deal"><b>S</b><h3>Social</h3></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Founder -->
+        <section class="hi-block">
+            <div class="hi-wrap-wide" style="max-width:1424px">
+                <div class="hi-founder">
+                    <img src="../assets/img/Lutfia Rahmannisa_CEO.png" alt="Lutfia Rahmannisa, Founder &amp; CEO House Ilmu Indonesia">
+                    <div>
+                        <p class="hi-eyebrow">Mengenal Founder Kami</p>
+                        <h2>Lutfia Rahmannisa</h2>
+                        <p class="hi-role">Founder &amp; Chief Executive Officer House Ilmu Indonesia</p>
+                        <p>Lutfia Rahmannisa, atau yang akrab disapa Kak Fia, adalah seorang sociopreneur muda. Di tengah kesibukannya menempuh studi Master Leadership and Policy Innovation di Universitas Gadjah Mada, Kak Fia aktif mendedikasikan dirinya sebagai teman cerita bagi anak muda di media sosial.</p>
+                        <p>Melalui konten-kontennya, ia konsisten mengedukasi dan merangkul generasi muda untuk terus bertumbuh dalam kepemimpinan dan pengembangan diri.</p>
+                        <!-- TODO: ganti dengan quote asli Kak Fia, atau hapus blockquote ini -->
+                        <blockquote>“Tempat quote Kak Fia”</blockquote>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- End about profile images section -->
+        </section>
+
+        <!-- Journey -->
+        <section class="hi-block" style="padding-top:2rem">
+            <div class="hi-wrap-wide" style="max-width:1224px">
+                <h2 class="hi-title">Our Journey</h2>
+                <p class="hi-lead">Cerita House Ilmu Indonesia dari ruang belajar di masa pandemi hingga terus bertumbuh bersama generasi muda.</p>
+
+                <div class="hi-tl">
+                    <!-- 2020 -->
+                    <article class="hi-tl-item">
+                        <div class="hi-tl-card">
+                            <p class="hi-year">2020</p>
+                            <h3>Awal Perjalanan House Ilmu Indonesia</h3>
+                            <h4>Cerita Singkat</h4>
+                            <p>House Ilmu Indonesia terbentuk di tengah masa COVID-19. Founder House Ilmu Indonesia memiliki keinginan untuk membangun organisasi yang tetap dapat membawa dampak meskipun aktivitas masyarakat banyak dilakukan dari rumah.</p>
+                            <p>House Ilmu Indonesia mulai menjadi ruang untuk tetap belajar, berkembang, dan mendapatkan akses ilmu di tengah keterbatasan mobilitas.</p>
+                            <h4>Fokus Pengembangan</h4>
+                            <ul><li>Self Development</li><li>Self Love</li><li>Education</li><li>Personal Development</li></ul>
+                            <h4>Program yang Berkembang</h4>
+                            <ul><li>Webinar</li><li>Instagram Live</li><li>Workshop persiapan lomba debat</li><li>Program edukasi online</li></ul>
+                            <h4>Kerja Sama</h4>
+                            <ul><li>Cakap</li><li>Phillip Sekuritas</li><li>RISYIK Collaboration</li></ul>
+                        </div>
+                        <div class="hi-tl-media"><img src="../assets/img/redesign/journey-2020.png" alt="Dokumentasi 2020" loading="lazy"></div>
+                    </article>
+
+                    <!-- 2021 -->
+                    <article class="hi-tl-item">
+                        <div class="hi-tl-card">
+                            <p class="hi-year">2021</p>
+                            <h3>Memperluas Kolaborasi dan Dampak</h3>
+                            <h4>Cerita Singkat</h4>
+                            <p>Pada 2021, House Ilmu Indonesia mulai memperluas jaringan kolaborasi melalui berbagai media partnership dan event collaboration.</p>
+                            <p>Fokus kegiatan berkembang menjadi tiga topik utama yang dekat dengan kehidupan generasi muda.</p>
+                            <h4>Fokus Pengembangan</h4>
+                            <ul><li>Education</li><li>Environment</li><li>Lifestyle</li></ul>
+                            <h4>Program yang Berkembang</h4>
+                            <ul><li>Instagram Live</li><li>Webinar</li><li>Collaborative Events</li></ul>
+                            <h4>Kerja Sama</h4>
+                            <ul><li>Pemimpin.id</li><li>Social Connect</li><li>Media Partners</li><li>Event Collaborations</li></ul>
+                        </div>
+                        <div class="hi-tl-media"><img src="../assets/img/redesign/journey-2021.png" alt="Dokumentasi 2021" loading="lazy"></div>
+                    </article>
+
+                    <!-- 2022 -->
+                    <article class="hi-tl-item">
+                        <div class="hi-tl-card">
+                            <p class="hi-year">2022</p>
+                            <h3>Memulai Perjalanan Volunteer</h3>
+                            <h4>Cerita Singkat</h4>
+                            <p>Pada 2022, House Ilmu Indonesia resmi meluncurkan open recruitment untuk volunteer.</p>
+                            <p>House Ilmu Indonesia terus mempertahankan program dan event yang sudah berjalan sambil mulai mengembangkan format program baru.</p>
+                            <h4>Fokus Pengembangan</h4>
+                            <ul><li>Youth Development</li><li>Education</li><li>Social Impact</li><li>Skill Development</li></ul>
+                            <h4>Program yang Berkembang</h4>
+                            <ul><li>Volunteer Program</li><li>Podcast</li><li>Campaign</li><li>Development Programs</li></ul>
+                            <h4>Kerja Sama</h4>
+                            <ul><li>Community Collaboration</li><li>Social Impact Collaboration</li><li>Program Collaboration untuk penyandang disabilitas</li></ul>
+                        </div>
+                        <div class="hi-tl-media"><img src="../assets/img/redesign/journey-2022.png" alt="Dokumentasi 2022" loading="lazy"></div>
+                    </article>
+
+                    <!-- 2023 -->
+                    <article class="hi-tl-item">
+                        <div class="hi-tl-card">
+                            <p class="hi-year">2023</p>
+                            <h3>HI Fest dan Pengembangan Internal</h3>
+                            <h4>Cerita Singkat</h4>
+                            <p>Pada 2023, House Ilmu Indonesia mulai menghadirkan program-program baru yang memperluas pengalaman belajar dan interaksi generasi muda.</p>
+                            <h4>Fokus Pengembangan</h4>
+                            <ul><li>Youth Development</li><li>Career</li><li>Personal Growth</li></ul>
+                            <h4>Program yang Berkembang</h4>
+                            <ul><li>HI Fest</li><li>Growth at House Ilmu</li><li>Staff &amp; Volunteer Development</li></ul>
+                            <h4>Kerja Sama</h4>
+                            <ul><li>Event Collaboration</li><li>Community Collaboration</li><li>Media Partnership</li></ul>
+                        </div>
+                        <div class="hi-tl-media"><img src="../assets/img/redesign/journey-2023.png" alt="Dokumentasi 2023" loading="lazy"></div>
+                    </article>
+
+                    <!-- 2024 -->
+                    <article class="hi-tl-item">
+                        <div class="hi-tl-card">
+                            <p class="hi-year">2024</p>
+                            <h3>Career Development</h3>
+                            <h4>Cerita Singkat</h4>
+                            <p>Pada 2024, House Ilmu Indonesia semakin memperkuat fokus pada persiapan generasi muda menghadapi dunia kerja dan pengembangan skill.</p>
+                            <h4>Fokus Pengembangan</h4>
+                            <ul><li>Career Preparation</li><li>Career Development</li><li>Skill Development</li></ul>
+                            <h4>Program yang Berkembang</h4>
+                            <ul><li>Sudut Karir</li><li>Review CV</li><li>Webskill</li><li>Reels Challenge</li><li>Career-related programs</li></ul>
+                            <h4>Kerja Sama</h4>
+                            <ul><li>Career-related collaborations</li><li>Community Collaboration</li><li>Event Collaboration</li></ul>
+                        </div>
+                        <div class="hi-tl-media"><img src="../assets/img/redesign/journey-2024.png" alt="Dokumentasi 2024" loading="lazy"></div>
+                    </article>
+
+                    <!-- 2025 -->
+                    <article class="hi-tl-item">
+                        <div class="hi-tl-card">
+                            <p class="hi-year">2025</p>
+                            <h3>Memperluas Akses dan Eksplorasi Karier</h3>
+                            <h4>Cerita Singkat</h4>
+                            <p>Pada 2025, House Ilmu Indonesia terus mengembangkan program yang membantu generasi muda mengenal dunia karier, membangun skill, dan mendapatkan exposure terhadap berbagai peluang.</p>
+                            <h4>Fokus Pengembangan</h4>
+                            <ul><li>Career Development</li><li>Self Development</li><li>Skill Development</li></ul>
+                            <h4>Program yang Berkembang</h4>
+                            <ul><li>Career Chapter</li><li>Brand Ambassador</li><li>Career-related programs</li><li>Skill Development Programs</li></ul>
+                            <h4>Kerja Sama</h4>
+                            <ul><li>Community Collaboration</li><li>Event Collaboration</li><li>Media Partnership</li></ul>
+                        </div>
+                        <div class="hi-tl-media"><img src="../assets/img/redesign/journey-2025.png" alt="Dokumentasi 2025" loading="lazy"></div>
+                    </article>
+
+                    <!-- 2026 (dokumentasi belum ada, sesuai desain) -->
+                    <article class="hi-tl-item">
+                        <div class="hi-tl-card">
+                            <p class="hi-year">2026</p>
+                            <h3>Fokus pada Persiapan Masa Depan</h3>
+                            <h4>Cerita Singkat</h4>
+                            <p>Memasuki 2026, House Ilmu Indonesia semakin memfokuskan arah pengembangan pada persiapan karier dan pengembangan diri generasi muda.</p>
+                            <p>House Ilmu Indonesia ingin menjadi ruang yang membantu Kawaners mengenali dirinya, menemukan arah, mengembangkan skill, dan mempersiapkan masa depan.</p>
+                            <h4>Fokus Pengembangan</h4>
+                            <ul><li>Career Preparation</li><li>Career Development</li><li>Self Development</li></ul>
+                            <h4>Program yang Berkembang</h4>
+                            <ul><li>Webskill</li><li>Workskill</li><li>Opportunity Corners</li><li>Sudut Karir</li><li>Chill-Ups</li><li>#MainkeKantor</li></ul>
+                            <h4>Kerja Sama</h4>
+                            <ul><li>Community Collaboration</li><li>Event Collaboration</li><li>Media Partnership</li><li>Strategic Partnerships</li></ul>
+                        </div>
+                        <div class="hi-tl-media hi-empty" role="img" aria-label="Dokumentasi 2026 segera hadir">Dokumentasi 2026</div>
+                    </article>
+                </div>
+
+                <div class="hi-actions"><a class="hi-btn" href="our-team/">Kenali Tim Kami →</a></div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="hi-cta">
+            <div class="hi-wrap">
+                <h2>Be Part of House Ilmu</h2>
+                <p>Mari belajar, terhubung, dan tumbuh bersama House Ilmu Indonesia.</p>
+                <!-- TODO: konfirmasi tujuan tombol (sementara ke halaman Career) -->
+                <a class="hi-btn" href="../career/">Gabung Sekarang ↗</a>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer content -->
     <div id="footer-container"></div>
@@ -239,14 +239,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
-    <!-- CDN animate on scroll -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <!-- Initialize swiper and aos -->
-    <script type="module" src="../assets/js/main.js"></script>
-    <!-- Initialize Navigation -->
-    <script src="/assets/js/global/nav.js"></script>
-    <!-- Initialize Footer -->
-    <script src="/assets/js/global/footer.js"></script>
+    <!-- Navbar & footer redesign -->
+    <script src="/assets/js/global/hi-layout.js"></script>
 </body>
 
 </html>

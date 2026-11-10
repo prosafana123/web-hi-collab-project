@@ -1,0 +1,128 @@
+/* hi-redesign.css
+   Redesign About Us / Career. Semua class berawalan "hi-" dan di-scope di bawah .hi-page,
+   supaya tidak bentrok dengan Bootstrap 5.3.3, global.css, navbar-footer.css.
+   TODO: cocokkan nilai warna & font dengan Dev Mode Figma. */
+
+.hi-page {
+  --hi-blue: #215cb5;
+  --hi-blue-deep: #17498f;
+  --hi-navy: #0b2a5b;
+  --hi-orange: #f57c00;
+  --hi-cream: #fff8f0;
+  --hi-ink: #0b2a5b;
+  --hi-muted: #3b5a8c;
+  --hi-line: #ecdfcf;
+  --hi-serif: "Nunito", system-ui, sans-serif;  /* font judul (Figma: Nunito Black/ExtraBold) */
+  --hi-sans: "Inter", system-ui, sans-serif;  /* font isi teks */
+
+  background: var(--hi-cream);
+  color: var(--hi-ink);
+  line-height: 1.7;
+}
+/* global.css memasang font di "*", jadi harus ditimpa dengan selector turunan wrapper */
+.hi-page,
+.hi-page * { font-family: var(--hi-sans); }
+.hi-page .hi-serif,
+.hi-page h1, .hi-page h2, .hi-page h3, .hi-page blockquote { font-family: var(--hi-serif); }
+
+.hi-wrap { width: min(1124px, 100% - 2.5rem); margin-inline: auto; }
+.hi-wrap-wide { width: min(1424px, 100% - 2.5rem); margin-inline: auto; }
+.hi-block { padding: 5rem 0; }
+
+.hi-eyebrow { color: var(--hi-orange); font-size: .78rem; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; margin: 0 0 .75rem; }
+.hi-title { color: var(--hi-orange); text-transform: uppercase; text-align: center; font-size: clamp(1.7rem, 3vw, 2.4rem); font-weight: 700; margin: 0; }
+.hi-title::after { content: ""; display: block; width: 40px; height: 3px; background: var(--hi-orange); margin: 1rem auto 0; }
+.hi-title-light { color: #fff; }
+.hi-lead { text-align: center; max-width: 680px; margin: 1rem auto 0; color: var(--hi-muted); }
+
+/* Hero */
+.hi-hero { background: var(--hi-blue); color: #fff; text-align: center; padding: 5rem 0; }
+.hi-hero h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 700; margin: 0 0 2.5rem; }
+.hi-hero-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; width: min(1124px, 100% - 2.5rem); margin-inline: auto; }
+.hi-hero-cols p { margin: 0; font-size: 1.15rem; line-height: 1.85; }
+
+/* Vision & mission */
+.hi-vision { background: var(--hi-navy); color: #fff; border-radius: 1rem; padding: 3rem 2rem; text-align: center; margin-top: 2.5rem; }
+.hi-vision h3 { font-size: clamp(1.5rem, 3vw, 2.1rem); font-weight: 700; max-width: 22ch; margin: 0 auto; line-height: 1.35; }
+.hi-mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; }
+.hi-mission { background: #fff; border: 1px solid var(--hi-line); border-radius: 1rem; padding: 2rem; }
+.hi-mission span { display: block; color: var(--hi-orange); font-weight: 600; font-size: .85rem; margin-bottom: 1rem; }
+.hi-mission p { margin: 0; font-family: var(--hi-serif); font-size: 1.3rem; line-height: 1.5; }
+
+/* Culture & values */
+.hi-culture { background: var(--hi-blue); color: #fff; }
+.hi-culture-top { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2.5rem; }
+.hi-culture-card { background: var(--hi-blue-deep); border: 1px solid rgba(255,255,255,.18); border-radius: 1rem; padding: 2rem; display: flex; flex-direction: column; justify-content: center; }
+.hi-culture-card h3 { font-size: 1.5rem; font-weight: 700; margin: 0; line-height: 1.35; }
+.hi-deals { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1.25rem; margin-top: 1.5rem; }
+.hi-deal { background: var(--hi-navy); border-radius: .75rem; padding: 1.75rem 1.25rem; min-height: 215px; display: flex; flex-direction: column; justify-content: space-between; }
+.hi-deal b { display: grid; place-items: center; width: 60px; height: 60px; border-radius: 50%; background: var(--hi-orange); font-family: var(--hi-serif); font-size: 1.9rem; }
+.hi-deal h3 { margin: 0; font-size: 1.2rem; font-weight: 700; }
+
+/* Founder */
+.hi-founder { background: #fff; border: 1px solid var(--hi-line); border-radius: 1.25rem; padding: 2.75rem; display: grid; grid-template-columns: 5fr 7fr; gap: 3.5rem; align-items: center; }
+.hi-founder img { width: 100%; aspect-ratio: 3 / 4; object-fit: cover; border-radius: 1rem; display: block; }
+.hi-founder h2 { font-size: clamp(2rem, 4vw, 2.8rem); font-weight: 700; margin: 0 0 .75rem; }
+.hi-founder .hi-role { color: var(--hi-orange); font-weight: 600; margin: 0 0 .25rem; }
+.hi-founder p { margin: 0 0 .5rem; }
+.hi-founder blockquote { margin: 1.75rem 0 0; padding: 1.5rem 2rem; background: var(--hi-cream); border-left: 4px solid var(--hi-orange); font-size: 1.3rem; }
+
+/* Journey / timeline */
+.hi-tl { position: relative; margin-top: 3rem; }
+.hi-tl::before { content: ""; position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: var(--hi-orange); transform: translateX(-50%); }
+.hi-tl-item { position: relative; display: grid; grid-template-columns: 1fr 1fr; gap: 90px; margin-bottom: 5rem; align-items: start; }
+.hi-tl-item::before { content: ""; position: absolute; left: 50%; top: 3rem; width: 20px; height: 20px; border-radius: 50%; background: var(--hi-cream); border: 4px solid var(--hi-orange); transform: translateX(-50%); }
+.hi-tl-item:nth-child(even) .hi-tl-media { order: -1; }
+.hi-tl-card { background: #fff; border: 1px solid var(--hi-line); border-radius: 1rem; padding: 2.25rem; }
+.hi-tl-card .hi-year { color: var(--hi-orange); font-family: var(--hi-serif); font-size: 2.4rem; font-weight: 700; line-height: 1.1; margin: 0 0 .5rem; }
+.hi-tl-card h3 { font-size: 1.55rem; font-weight: 700; margin: 0 0 1.25rem; line-height: 1.3; }
+.hi-tl-card h4 { font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; margin: 1.5rem 0 .5rem; }
+.hi-tl-card p { color: var(--hi-muted); margin: 0 0 .75rem; font-size: .95rem; }
+.hi-tl-card ul { list-style: none; margin: 0; padding: 0 0 0 1.4rem; color: var(--hi-muted); font-size: .95rem; line-height: 1.9; }
+.hi-tl-media { background: var(--hi-navy); border-radius: 1rem; padding: 0; overflow: hidden; display: flex; justify-content: center; }
+.hi-tl-media img { max-height: 425px; width: auto; max-width: 100%; display: block; }
+.hi-tl-media.hi-empty { background: #e8ebf0; min-height: 425px; align-items: flex-end; justify-content: center; padding: 2rem; color: #9aa3b2; font-size: .72rem; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; }
+
+/* Buttons & CTA */
+.hi-actions { text-align: center; }
+.hi-btn { display: inline-block; background: var(--hi-orange); color: #fff; font-weight: 600; text-decoration: none; padding: .85rem 1.6rem; border-radius: .5rem; box-shadow: 0 3px 0 #c76400; transition: transform .15s; }
+.hi-btn:hover { color: #fff; transform: translateY(-2px); }
+.hi-btn:focus-visible { outline: 3px solid var(--hi-navy); outline-offset: 3px; }
+.hi-cta { text-align: center; padding: 5rem 0 6rem; }
+.hi-cta h2 { color: var(--hi-blue); text-transform: uppercase; font-size: clamp(1.7rem, 3vw, 2.2rem); margin: 0 0 .5rem; }
+.hi-cta p { color: var(--hi-muted); margin: 0 0 1.5rem; }
+
+@media (max-width: 991.98px) {
+  .hi-culture-top { grid-template-columns: 1fr; }
+  .hi-deals { grid-template-columns: repeat(3, 1fr); }
+  .hi-founder { grid-template-columns: 1fr; padding: 1.75rem; gap: 2rem; }
+  .hi-tl-item { gap: 40px; }
+}
+@media (max-width: 767.98px) {
+  .hi-block { padding: 3.5rem 0; }
+  .hi-hero-cols, .hi-mission-grid { grid-template-columns: 1fr; gap: 1.5rem; }
+  .hi-deals { grid-template-columns: 1fr 1fr; }
+  .hi-tl::before { left: 10px; }
+  .hi-tl-item { grid-template-columns: 1fr; padding-left: 40px; gap: 1.25rem; margin-bottom: 3.5rem; }
+  .hi-tl-item::before { left: 10px; }
+  .hi-tl-item:nth-child(even) .hi-tl-media { order: 0; }
+  .hi-tl-card { padding: 1.5rem; }
+}
+
+/* Judul dibuat tebal seperti di Figma (Nunito ExtraBold/Black) */
+.hi-page h1, .hi-page h2, .hi-page h3 { font-weight: 800; letter-spacing: -0.01em; }
+.hi-hero h1 { font-weight: 900; }
+.hi-page .hi-year { font-weight: 900; }
+.hi-page .hi-mission p, .hi-page blockquote { font-weight: 700; }
+.hi-page p, .hi-page li { font-size: 1rem; }
+
+/* Hero + Vision/Mission ala Figma */
+.hi-hero { padding: 4rem 0; }
+.hi-hero h1 { margin-bottom: 1rem; }
+.hi-hero-sub { max-width: 640px; margin: 0 auto; font-size: 1.05rem; line-height: 1.7; opacity: .92; }
+.hi-vm { display: grid; grid-template-columns: 1fr 1fr; gap: 1.75rem; max-width: 900px; margin-inline: auto; text-align: left; }
+.hi-vm-card { background: #fff; color: var(--hi-navy); border-radius: 1rem; padding: 2rem 2.25rem; box-shadow: 0 8px 24px rgba(11, 42, 91, .18); }
+.hi-vm-card h2 { color: var(--hi-orange); font-size: 1.1rem; font-weight: 900; letter-spacing: .06em; text-transform: uppercase; margin: 0 0 .9rem; }
+.hi-vm-card p, .hi-vm-card li { margin: 0; font-size: 1rem; line-height: 1.65; font-weight: 600; }
+.hi-vm-card ol { margin: 0; padding-left: 1.25rem; display: grid; gap: .5rem; }
+@media (max-width: 767.98px) { .hi-vm { grid-template-columns: 1fr; } .hi-vm-card { padding: 1.5rem; } }

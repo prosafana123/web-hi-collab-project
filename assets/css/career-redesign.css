@@ -1,0 +1,807 @@
+
+/* =====================================================
+   HOUSE ILMU INDONESIA
+   CAREER PAGE - HIGH FIDELITY REDESIGN
+   FONT: NUNITO
+===================================================== */
+
+:root {
+    --career-blue: #245fb5;
+    --career-dark-blue: #103366;
+    --career-navy: #102c55;
+    --career-orange: #ff8417;
+    --career-cream: #fff9f0;
+    --career-white: #ffffff;
+    --career-muted: #78869b;
+    --career-border: #e5e9ef;
+}
+
+/* =====================================================
+   GLOBAL
+===================================================== */
+
+.career-page {
+    font-family: "Nunito", sans-serif;
+    color: var(--career-navy);
+    overflow: hidden;
+    -webkit-font-smoothing: antialiased;
+}
+
+.career-page *,
+.career-page *::before,
+.career-page *::after {
+    box-sizing: border-box;
+}
+
+.career-container {
+    width: min(100% - 48px, 1224px);
+    margin: 0 auto;
+}
+
+.career-page a {
+    text-decoration: none;
+}
+
+.career-page button,
+.career-page select {
+    font-family: "Nunito", sans-serif;
+}
+
+.career-page h1,
+.career-page h2,
+.career-page h3,
+.career-page h4 {
+    font-family: "Nunito", sans-serif;
+    font-weight: 800;
+}
+
+.career-page p {
+    line-height: 1.8;
+}
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.career-hero {
+    background: var(--career-cream);
+    padding: 75px 0;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 55px;
+}
+
+.career-eyebrow {
+    display: inline-block;
+    color: var(--career-orange);
+    font-size: 11px;
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+
+.hero-content h1 {
+    color: var(--career-navy);
+    font-family: "Nunito", sans-serif;
+    font-size: clamp(42px, 5vw, 62px);
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -1.5px;
+    margin: 10px 0 28px;
+}
+
+.hero-content p {
+    color: #66758c;
+    font-size: 14px;
+    line-height: 1.85;
+    margin-bottom: 15px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.career-btn,
+.career-btn-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 43px;
+    padding: 11px 20px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 900;
+    transition: .25s ease;
+}
+
+.career-btn {
+    color: white;
+    background: var(--career-orange);
+    border: 1px solid var(--career-orange);
+    box-shadow: 0 3px 0 #c9680b;
+}
+
+.career-btn:hover {
+    background: #e96e00;
+    color: white;
+    transform: translateY(-2px);
+}
+
+.career-btn-outline {
+    color: var(--career-orange);
+    border: 1px solid var(--career-orange);
+    background: white;
+}
+
+.career-btn-outline:hover {
+    color: white;
+    background: var(--career-orange);
+}
+
+.hero-visual {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 14px;
+}
+
+.hero-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* =====================================================
+   SECTION HEADING
+===================================================== */
+
+.career-heading {
+    text-align: center;
+    margin: 0 auto 38px;
+    max-width: 780px;
+}
+
+.career-heading h2 {
+    color: var(--career-orange);
+    font-family: "Nunito", sans-serif;
+    font-size: clamp(25px, 3vw, 32px);
+    font-weight: 900;
+    letter-spacing: .5px;
+    margin: 0;
+}
+
+.heading-line {
+    display: block;
+    height: 3px;
+    width: 35px;
+    background: var(--career-orange);
+    margin: 15px auto;
+}
+
+.career-heading p {
+    color: #78869b;
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.light-heading h2,
+.light-heading p {
+    color: white;
+}
+
+/* =====================================================
+   CULTURE & VALUES
+===================================================== */
+
+.career-values {
+    background: var(--career-blue);
+    padding: 65px 0;
+}
+
+.career-values .career-heading {
+    margin-bottom: 38px;
+}
+
+.career-values .career-heading h2 {
+    color: white;
+}
+
+.value-top-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-bottom: 25px;
+}
+
+.value-top-card {
+    min-height: 145px;
+    padding: 27px 26px;
+    border: 1px solid rgba(255,255,255,.2);
+    background: #1b4d91;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.value-top-card small {
+    color: #ffad54;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 1.4px;
+    margin-bottom: 12px;
+}
+
+.value-top-card h3 {
+    color: white;
+    font-family: "Nunito", sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.deals-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 17px;
+}
+
+.deals-card {
+    min-height: 160px;
+    background: var(--career-dark-blue);
+    border-radius: 12px;
+    padding: 27px 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform .25s ease;
+}
+
+.deals-card:hover {
+    transform: translateY(-4px);
+}
+
+.deals-card span {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    background: var(--career-orange);
+    color: white;
+    border-radius: 50%;
+    font-family: "Nunito", sans-serif;
+    font-size: 25px;
+    font-weight: 900;
+    margin-bottom: 24px;
+}
+
+.deals-card h3 {
+    color: white;
+    font-family: "Nunito", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    margin: 0;
+}
+
+/* =====================================================
+   ALUMNI STORIES
+   HORIZONTAL CAROUSEL
+===================================================== */
+
+.career-alumni {
+    background: var(--career-cream);
+    padding: 65px 0;
+}
+
+.alumni-wrapper {
+    position: relative;
+    padding: 0 8px;
+}
+
+.alumni-grid {
+    display: flex;
+    gap: 16px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    padding: 5px 2px 15px;
+}
+
+.alumni-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.alumni-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 18px rgba(0,0,0,.07);
+    min-width: 0;
+    flex: 0 0 calc((100% - 32px) / 3);
+    scroll-snap-align: start;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.alumni-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0,0,0,.1);
+}
+
+.alumni-photo {
+    height: 225px;
+    background: #e9edf2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #a6b6c8;
+    font-size: 24px;
+}
+
+.alumni-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.alumni-photo small {
+    font-size: 9px;
+    letter-spacing: 1px;
+    margin-top: 8px;
+}
+
+.alumni-content {
+    padding: 22px 25px 25px;
+}
+
+.quote-mark {
+    color: var(--career-orange);
+    font-family: Georgia, serif;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.alumni-content p {
+    min-height: 85px;
+    color: #596b83;
+    font-size: 12px;
+    line-height: 1.8;
+    margin: 8px 0 20px;
+}
+
+.alumni-content strong {
+    display: block;
+    color: var(--career-navy);
+    font-size: 13px;
+    font-weight: 900;
+    margin-bottom: 9px;
+}
+
+.alumni-content > span:not(.quote-mark) {
+    display: block;
+    color: #7b899e;
+    font-size: 12px;
+    margin-bottom: 16px;
+}
+
+.alumni-content a {
+    color: var(--career-orange);
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.alumni-content a:hover {
+    color: #d76600;
+}
+
+/* CAROUSEL ARROWS */
+
+.alumni-arrow {
+    position: absolute;
+    top: 42%;
+    z-index: 2;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background: var(--career-orange);
+    color: white;
+    font-size: 25px;
+    line-height: 1;
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0,0,0,.12);
+    transition: .2s ease;
+}
+
+.alumni-arrow:hover {
+    background: #e96e00;
+    transform: scale(1.08);
+}
+
+.alumni-prev {
+    left: -12px;
+}
+
+.alumni-next {
+    right: -12px;
+}
+
+/* =====================================================
+   CAREER OPPORTUNITIES
+===================================================== */
+
+.career-opportunities {
+    background: var(--career-blue);
+    padding: 65px 0;
+}
+
+.career-opportunities .career-heading {
+    margin-bottom: 32px;
+}
+
+.career-select-wrap {
+    display: flex;
+    flex-direction: column;
+    width: 420px;
+    max-width: 100%;
+    margin-bottom: 32px;
+}
+
+.career-select-wrap label {
+    color: white;
+    font-size: 12px;
+    font-weight: 900;
+    margin-bottom: 9px;
+}
+
+.career-select-wrap select {
+    width: 100%;
+    height: 49px;
+    border: 1px solid #dfe5ef;
+    border-radius: 9px;
+    background: white;
+    color: var(--career-navy);
+    padding: 0 16px;
+    font-size: 14px;
+    font-weight: 700;
+    outline: none;
+    cursor: pointer;
+}
+
+.career-position-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.position-card {
+    background: white;
+    border-radius: 11px;
+    padding: 27px 28px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    transition: .25s ease;
+}
+
+.position-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0,0,0,.13);
+}
+
+.position-card[hidden] {
+    display: none !important;
+}
+
+.position-tag {
+    align-self: flex-start;
+    padding: 6px 12px;
+    border-radius: 30px;
+    background: #eaf2ff;
+    color: #1455a7;
+    font-size: 10px;
+    font-weight: 900;
+    margin-bottom: 18px;
+}
+
+.position-card h3 {
+    color: var(--career-navy);
+    font-family: "Nunito", sans-serif;
+    font-size: 19px;
+    font-weight: 900;
+    margin-bottom: 12px;
+}
+
+.position-card p {
+    color: #7a899f;
+    font-size: 12px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.position-location {
+    color: #7b899f;
+    font-size: 12px;
+    margin-top: auto;
+    margin-bottom: 18px;
+}
+
+.position-card a {
+    color: var(--career-orange);
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.position-card a:hover {
+    color: #d76600;
+}
+
+.position-empty {
+    text-align: center;
+    color: white;
+    padding: 25px;
+}
+
+/* =====================================================
+   RECRUITMENT ANNOUNCEMENT
+===================================================== */
+
+.career-recruitment {
+    background: var(--career-cream);
+    padding: 65px 0 75px;
+}
+
+.career-recruitment .career-heading {
+    margin-bottom: 32px;
+}
+
+.recruitment-tabs {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 26px;
+}
+
+.recruitment-tab {
+    background: white;
+    color: #1755a2;
+    border: 1px solid #d6e0ed;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-size: 11px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: .2s ease;
+}
+
+.recruitment-tab:hover,
+.recruitment-tab.active {
+    background: var(--career-orange);
+    border-color: var(--career-orange);
+    color: white;
+}
+
+.recruitment-panel {
+    max-width: 1030px;
+    min-height: 260px;
+    margin: auto;
+    padding: 55px 30px;
+    background: white;
+    border-radius: 13px;
+    border-top: 5px solid #9baec4;
+    box-shadow: 0 12px 30px rgba(0,0,0,.06);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.recruitment-label {
+    display: inline-block;
+    background: #eaf2ff;
+    color: #1455a7;
+    border-radius: 30px;
+    padding: 9px 17px;
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .7px;
+    margin-bottom: 22px;
+}
+
+.recruitment-panel h3 {
+    color: var(--career-navy);
+    font-family: "Nunito", sans-serif;
+    font-size: clamp(22px, 3vw, 32px);
+    font-weight: 900;
+    margin-bottom: 14px;
+}
+
+.recruitment-panel p {
+    color: #7b899e;
+    font-size: 13px;
+    line-height: 1.8;
+    margin: 0;
+    max-width: 650px;
+}
+
+/* =====================================================
+   RESPONSIVE TABLET
+===================================================== */
+
+@media (max-width: 992px) {
+
+    .hero-grid {
+        gap: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 43px;
+    }
+
+    .value-top-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .deals-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .career-position-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .alumni-card {
+        flex-basis: calc((100% - 16px) / 2);
+    }
+}
+
+/* =====================================================
+   RESPONSIVE MOBILE
+===================================================== */
+
+@media (max-width: 650px) {
+
+    .career-container {
+        width: min(100% - 32px, 500px);
+    }
+
+    .career-hero {
+        padding: 48px 0;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content h1 {
+        font-size: 43px;
+    }
+
+    .hero-visual {
+        height: 230px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .career-btn,
+    .career-btn-outline {
+        width: 100%;
+    }
+
+    .career-values,
+    .career-alumni,
+    .career-opportunities,
+    .career-recruitment {
+        padding: 48px 0;
+    }
+
+    .value-top-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .value-top-card {
+        min-height: 115px;
+    }
+
+    .deals-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .deals-card {
+        min-height: 135px;
+        padding: 20px;
+    }
+
+    .deals-card span {
+        width: 40px;
+        height: 40px;
+        font-size: 23px;
+        margin-bottom: 18px;
+    }
+
+    .alumni-wrapper {
+        padding: 0 4px;
+    }
+
+    .alumni-grid {
+        gap: 14px;
+    }
+
+    .alumni-card {
+        flex-basis: 100%;
+    }
+
+    .alumni-photo {
+        height: 210px;
+    }
+
+    .alumni-prev {
+        left: -10px;
+    }
+
+    .alumni-next {
+        right: -10px;
+    }
+
+    .career-position-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .position-card {
+        min-height: 260px;
+    }
+
+    .recruitment-panel {
+        min-height: 230px;
+        padding: 35px 20px;
+    }
+
+    .recruitment-tabs {
+        gap: 8px;
+    }
+
+    .recruitment-tab {
+        padding: 9px 13px;
+        font-size: 10px;
+    }
+}
+
+/* =====================================================
+   ACCESSIBILITY
+===================================================== */
+
+.career-page a:focus-visible,
+.career-page button:focus-visible,
+.career-page select:focus-visible {
+    outline: 3px solid #ffad54;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .career-page *,
+    .career-page *::before,
+    .career-page *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+        animation-duration: .01ms !important;
+    }
+}

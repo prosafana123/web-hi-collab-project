@@ -1,0 +1,167 @@
+
+.alumni-modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: rgba(10, 28, 55, .72);
+    opacity: 0;
+    visibility: hidden;
+    transition: .25s ease;
+}
+
+.alumni-modal-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.alumni-modal {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    max-height: calc(100vh - 48px);
+    overflow-y: auto;
+    scrollbar-width: none;
+    background: #fff9f0;
+    border-radius: 16px;
+    transform: translateY(15px);
+    transition: .25s ease;
+    box-shadow: 0 15px 50px rgba(0,0,0,.15);
+}
+
+.alumni-modal::-webkit-scrollbar {
+    display: none;
+}
+
+.alumni-modal-overlay.show .alumni-modal {
+    transform: translateY(0);
+}
+
+.alumni-modal-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    z-index: 5;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background: #102d5c;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.alumni-modal-close:hover {
+    background: #ff8517;
+}
+
+.alumni-modal-photo {
+    width: 100%;
+    height: 290px;
+    background: #dfe7f0;
+    overflow: hidden;
+}
+
+.alumni-modal-photo img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.alumni-photo-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8092aa;
+    font-family: 'Nunito', sans-serif;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.alumni-modal-body {
+    padding: 32px 40px 38px;
+}
+
+.alumni-modal-label {
+    display: inline-block;
+    padding: 7px 15px;
+    border-radius: 30px;
+    background: #eaf1ff;
+    color: #245fb5;
+    font-family: 'Nunito', sans-serif;
+    font-size: 11px;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.alumni-modal h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 600;
+    color: #102d5c;
+    margin: 0 0 8px;
+}
+
+.alumni-modal-role {
+    font-family: 'Nunito', sans-serif;
+    font-size: 14px;
+    color: #ff8517;
+    font-weight: 800;
+    margin-bottom: 22px;
+}
+
+.alumni-modal-divider {
+    width: 48px;
+    height: 3px;
+    background: #ff8517;
+    margin: 20px 0 28px;
+}
+
+.alumni-modal-story {
+    font-family: 'Nunito', sans-serif;
+    color: #29476d;
+    font-size: 15px;
+    line-height: 1.9;
+    white-space: pre-line;
+}
+
+.alumni-modal-footer {
+    font-family: 'Nunito', sans-serif;
+    color: #8291a7;
+    font-size: 12px;
+    margin-top: 25px;
+}
+
+@media (max-width: 600px) {
+    .alumni-modal-overlay {
+        padding: 12px;
+    }
+
+    .alumni-modal-photo {
+        height: 210px;
+    }
+
+    .alumni-modal-body {
+        padding: 28px 23px 30px;
+    }
+
+    .alumni-modal h2 {
+        font-size: 27px;
+    }
+
+    .alumni-modal-story {
+        font-size: 14px;
+    }
+}
